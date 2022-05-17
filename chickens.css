@@ -3,3 +3,7 @@ h1 {
     font-weight: normal;
     font-style: italic;
 }
+
+h2 {
+    text-align: center;
+}
