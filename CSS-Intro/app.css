@@ -1,0 +1,33 @@
+/* h2 {
+    color: rgb(34, 130, 98);
+    background-color: cadetblue;
+}
+
+button {
+    background-color: rgb(0, 254, 0);
+    color: rgb(35, 129, 91);
+    border-color: rgb(117, 198, 46);
+}
+
+p {
+    color: springgreen;
+    bac
+} */
+
+h1 {
+    color: green;
+}
+
+h2 {
+    color: magenta;
+}
+
+p {
+    color: white;
+    background-color: black;
+}
+
+button {
+    color: red;
+    background-color: pink;
+}

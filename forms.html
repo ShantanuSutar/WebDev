@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Demo</title>
+</head>
+
+<body>
+
+    <a href="chickens.html">Go back</a>
+    <h1>Forms Demo</h1>
+    <form action="/asdefasa">
+        <p>
+            <label for="username">Enter your username here - </label>
+            <input id="username" type="text" placeholder="username" name="username">
+        </p>
+        <p>
+            <label for="password">Enter your password: </label>
+            <input id="password" type="password" placeholder="password" name="password">
+        </p>
+        <p>
+            <label for="colour"> Chose a color: </label>
+            <input id="colour" type="color" placeholder="Color" name="color">
+        </p>
+        <p><label for="month">Choose the month</label>
+            <input id="month" type="month" placeholder="month" name="month">
+        </p>
+        <button>Submit kar be</button>
+    </form>
+    <hr>
+    <button>Not inside form</button>
+    <hr>
+
+    <h1>Searching Hijhakings</h1>
+    <p>
+    <h2>Search Reddit</h2>
+    <form action="https://www.reddit.com/search">
+        <input type="text" name="q">
+        <button>Search Reddit</button>
+    </form>
+    </p>
+    <p>
+    <h2>Search Google</h2>
+    <form action="https://www.google.com/search">
+        <input type="text" name="q">
+        <button>Search Google</button>
+    </form>
+    </p>
+
+    <h2>More Inputs</h2>
+    <form action="/adssadw">
+        <input type="checkbox" name="agree" id="agree">
+        <label for="agree">I agree to everything</label>
+
+        <p>
+            <label for="X">X:</label>
+            <input type="radio" name="size" id="X" value="X">
+            <br>
+            <label for="M">M:</label>
+            <input type="radio" name="size" id="M" value="M">
+            <br>
+            <label for=XL">XL:</label>
+            <input type="radio" name="size" id="XL" value="XL">
+            <br>
+        </p>
+
+        <p>
+            <label for="">Please select a dish : </label>
+            <select name="meal" id="meal">
+                <option value="Kajukari">Kajukari</option>
+                <option value="Paneer Masala">Paneer Masala</option>
+                <option value="Shev Bhaji">Shev Bhaji</option>
+            </select>
+
+        </p>
+        <p>
+            <label for="cheese">Amount of Cheese : </label>
+            <input type="range" name="Cheese" id="cheese" min="1" max="100">
+        </p>
+        <p>
+            <label for="number">Enter a number : </label>
+            <input type="number" name="number" id="number" min="1" max="1000" value="1">
+        </p>
+        <p>
+            <label for="request">Any special request : </label>
+            <br>
+            <textarea name="Request" id="request" rows="10" cols="30" placeholder="Type Here"></textarea>
+        </p>
+
+        <button>Submit</button>
+    </form>
+
+    <form action="Register">
+        <p>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" placeholder="username">
+        </p>
+        <p>
+            <label for="Password">password</label>
+            <input type="password" name="password" id="password" placeholder="password">
+        </p>
+        <button>Register</button>
+    </form>
+
+    <form action="asads">
+        <h2>Validations</h2>
+        <p>
+            <label for="username">Enter your name : </label>
+            <input type="text" name="username" id="username" required>
+            <button>Submit</button>
+        </p>
+
+        <p>
+            <input type="email" name="email" id="email">
+        </p>
+
+    </form>
+</body>
+
+</html>
