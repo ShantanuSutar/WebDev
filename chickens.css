@@ -1,9 +1,58 @@
-h1 {
+/* h1 {
     text-align: center;
-    font-weight: normal;
+    font-weight: 100;
     font-style: italic;
+    text-decoration: underline wavy;
+    text-decoration-color: plum;
+    color: rgb(239, 211, 83);
+    letter-spacing: 4px;
+    font-size: 40px;
+    font-family: monospace;
+    text-transform: uppercase;
+
 }
 
 h2 {
+    text-shadow: 3;
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: normal;
     text-align: center;
+    font-family: sans-serif;
+}
+*/
+p {
+
+    line-height: 2;
+    font-family: sans-serif;
+}
+
+* {
+    color: #ff7b00;
+    background-color: #ffea00;
+}
+
+h1,
+h2 {
+    color: #80b918;
+}
+
+#heavy {
+    text-decoration-color: black;
+    color: black;
+}
+
+a {
+    color: #ff006e;
+    text-decoration: underline wavy;
+    line-height: 2;
+
+}
+
+input {
+    color: #80b918;
+}
+
+a[href*="emmetdemo.html"] {
+    color: white;
 }
