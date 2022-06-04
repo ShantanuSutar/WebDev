@@ -1,0 +1,27 @@
+h1 {
+    background-color: palegoldenrod;
+    width: fit-content;
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+    padding: 5px 12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: coral;
+
+}
+
+h1:hover {
+    color: crimson;
+    background-color: darkgoldenrod;
+}
+
+span {
+    background-color: paleturquoise;
+    font-size: 25px;
+    margin: 5px;
+    width: fit-content;
+    padding: 6px;
+    border: 2px;
+    border-style: solid;
+    /* display: block; */
+}

@@ -1,3 +1,57 @@
+body {
+    margin: 0;
+}
+
 div {
-    width: 800px;
+    width: 400px;
+    height: 100px;
+
+}
+
+h1 {
+    background-color: #80b918;
+    width: fit-content;
+    color: #d4d700;
+    padding: 5px 100px;
+    border-radius: 5px;
+    margin: 0;
+}
+
+span {
+    padding-left: 20px;
+}
+
+#one {
+    background-color: #d4d700;
+    border-style: solid;
+    border-color: aqua;
+    box-sizing: border-box;
+    /* margin-left: 50px;
+    margin-bottom: 100px; */
+    margin: 20px;
+}
+
+#two {
+    background-color: #bfd200;
+}
+
+#three {
+    background-color: #aacc00;
+    border: 4px solid red;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+button {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: bold;
+    padding: 3px 8px;
+    background-color: aquamarine;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #5dbad4;
+    color: white;
 }
