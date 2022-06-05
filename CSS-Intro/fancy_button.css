@@ -1,0 +1,26 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #023047;
+}
+
+button {
+    background: none;
+    color: #fb8500;
+    font-size: 30px;
+    /* font-size: 1em; */
+    border: 2px solid;
+    padding: 0.3em 1.2em;
+    /* padding: 1em 2em; */
+    transition: color 0.15s, border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+
+button:hover {
+    border-color: #caf0f8;
+    color: #90e0ef;
+    box-shadow: 0 0.5em 0.5em -0.5em;
+    transform: translateY(-0.25em);
+}

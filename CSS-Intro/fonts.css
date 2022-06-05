@@ -1,0 +1,15 @@
+body {
+    font-family: Roboto, sans-serif;
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: Monton, cursive;
+    font-weight: 100;
+}
+
+p {
+    /* font-size: 100px; */
+    font-family: IBM Plex Mono, monospace;
+}
