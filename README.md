@@ -1,4 +1,4 @@
-# WebDev.github.io
+# WebDev
 
 Currently, I am learning Web Development from udemy which goes by the name "Web Developer Bootcamp" by Colt Steele.
 
