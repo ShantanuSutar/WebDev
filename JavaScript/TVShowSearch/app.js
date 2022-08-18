@@ -15,6 +15,5 @@ const makeImages = (shows) => {
             img.src = result.show.image.medium;
             document.body.append(img);
         }
-
     }
 }
