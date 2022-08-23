@@ -4,7 +4,7 @@ Currently, I am learning Web Development from udemy which goes by the name "Web 
 
 These are my 'Classworks' and 'Homeworks' up until now.
 
-Soon going to build some cool HTML and CSS projects with Bootstrap.
+Soon going to build some cool projects from scratch.
 
 Stay tuned for that...
  
