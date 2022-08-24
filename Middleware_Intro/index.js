@@ -7,6 +7,14 @@ const { nextTick } = require('process');
 app.use(morgan('tiny'))
 
 
+const verifyPassword = ((req, res, next) => {
+    const { password } = req.query;
+    if (password === 'chickennugget') {
+        next();
+    }
+    res.send('SORRY YOU NEED A PASSWORD!!!')
+})
+
 app.use((req, res, next) => {
     req.requuestTime = Date.now();
     console.log(req.method, req.path)
@@ -18,16 +26,8 @@ app.use('/dogs', (req, res, next) => {
     next();
 })
 
-app.get('/secret', (req, res) => {
+app.get('/secret', verifyPassword, (req, res) => {
     res.send('MY SECRET IS : I AM TRUTH')
-})
-
-app.use((req, res, next) => {
-    const { password } = req.query;
-    if (password === 'chickennugget') {
-        next();
-    }
-    res.send('SORRY YOU NEED A PASSWORD!!!')
 })
 
 // morgan('tiny')
