@@ -7,16 +7,9 @@ const { nextTick } = require('process');
 app.use(morgan('tiny'))
 
 
-const verifyPassword = ((req, res, next) => {
-    const { password } = req.query;
-    if (password === 'chickennugget') {
-        next();
-    }
-    res.send('SORRY YOU NEED A PASSWORD!!!')
-})
 
 app.use((req, res, next) => {
-    req.requuestTime = Date.now();
+    req.requestTime = Date.now();
     console.log(req.method, req.path)
     next();
 })
@@ -26,8 +19,31 @@ app.use('/dogs', (req, res, next) => {
     next();
 })
 
+
+const verifyPassword = ((req, res, next) => {
+    const { password } = req.query;
+    if (password === 'chickennugget') {
+        next();
+    }
+    // res.send('SORRY YOU NEED A PASSWORD!!!')
+    throw new Error('Password Required!')
+})
+
+app.get('/error', (req, res) => {
+    chicken.fly();
+})
+
+app.get('/dogs', (req, res) => {
+    res.send('WOOF WOOF')
+})
+
+
 app.get('/secret', verifyPassword, (req, res) => {
     res.send('MY SECRET IS : I AM TRUTH')
+})
+
+app.use((req, res) => {
+    res.status(404).send("NOT FOUND")
 })
 
 // morgan('tiny')
@@ -49,13 +65,8 @@ app.get('/', (req, res) => {
     res.send('HOME PAGE')
 })
 
-app.get('/dogs', (req, res) => {
-    res.send('WOOF WOOF')
-})
 
-app.use((req, res) => {
-    res.status(404).send("NOT FOUND")
-})
+
 
 app.listen(3000, () => {
     console.log('App is running on localhost:3000')
