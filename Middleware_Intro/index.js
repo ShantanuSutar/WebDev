@@ -1,8 +1,9 @@
-const { query } = require('express');
+
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
-const { nextTick } = require('process');
+
+const AppError = require('./AppError');
 
 app.use(morgan('tiny'))
 
@@ -25,8 +26,10 @@ const verifyPassword = ((req, res, next) => {
     if (password === 'chickennugget') {
         next();
     }
+    throw new AppError('password required', 401)
     // res.send('SORRY YOU NEED A PASSWORD!!!')
-    throw new Error('Password Required!')
+
+    //    throw new AppError(401, 'Password Required!')
 })
 
 app.get('/', (req, res) => {
@@ -48,17 +51,28 @@ app.get('/secret', verifyPassword, (req, res) => {
     res.send('MY SECRET IS : I AM TRUTH')
 })
 
+app.get('/admin', (req, res) => {
+    throw new AppError('You are not Admin!', 403)
+})
+
 app.use((req, res) => {
     res.status(404).send("NOT FOUND")
 })
 
-app.use((err, req, res, next) => {
-    console.log("****************************")
-    console.log("************ERROR***********")
-    console.log("****************************")
-    console.log(err)
-})
+// app.use((err, req, res, next) => {
+//     console.log("****************************")
+//     console.log("************ERROR***********")
+//     console.log("****************************")
+//     console.log(err)
+//     next(err);
+// })
 
+
+app.use((err, req, res, next) => {
+    const { status = 500, message = 'Something went wrong' } = err;
+
+    res.status(status).send(message)
+})
 // morgan('tiny')
 
 
