@@ -76,7 +76,7 @@ app.get('/products/:id/edit', wrapAsync(async (req, res, next) => {
     const { id } = req.params;
     const product = await Product.findById(id);
     if (!product) {
-        throw next(new AppError('Product Not Found', 404));
+        throw new AppError('Product Not Found', 404);
     }
     res.render('products/edit', { product, categories })
 
@@ -94,6 +94,17 @@ app.delete('/products/:id', async (req, res) => {
     const { id } = req.params;
     const deletedProduct = await Product.findByIdAndDelete(id);
     res.redirect('/products');
+})
+
+const handleValidationErr = err => {
+    console.dir(err);
+    return new AppError(`Validation Failed...${err.message}`, 400);
+}
+
+app.use((err, req, res, next) => {
+    console.log(err.name);
+    if (err.name === 'Validation Error') err = handleValidationErr(err)
+    next(err);
 })
 
 app.use((err, req, res, next) => {
