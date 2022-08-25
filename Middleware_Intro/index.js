@@ -29,11 +29,17 @@ const verifyPassword = ((req, res, next) => {
     throw new Error('Password Required!')
 })
 
+app.get('/', (req, res) => {
+    console.log(` REQUEST DATE: ${req.requestTime}`)
+    res.send('HOME PAGE')
+})
+
 app.get('/error', (req, res) => {
     chicken.fly();
 })
 
 app.get('/dogs', (req, res) => {
+    console.log(` REQUEST DATE: ${req.requestTime}`)
     res.send('WOOF WOOF')
 })
 
@@ -44,6 +50,13 @@ app.get('/secret', verifyPassword, (req, res) => {
 
 app.use((req, res) => {
     res.status(404).send("NOT FOUND")
+})
+
+app.use((err, req, res, next) => {
+    console.log("****************************")
+    console.log("************ERROR***********")
+    console.log("****************************")
+    console.log(err)
 })
 
 // morgan('tiny')
@@ -60,10 +73,6 @@ app.use((req, res) => {
 //     next();
 // })
 
-
-app.get('/', (req, res) => {
-    res.send('HOME PAGE')
-})
 
 
 
