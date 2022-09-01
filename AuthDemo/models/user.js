@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
-    usename: {
+    username: {
         type: String,
         required: [true, 'Username cannot be blank']
     },
